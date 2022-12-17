@@ -1,0 +1,15 @@
+<div class="container">
+  <mat-toolbar>
+    <p>Dashboard</p>
+  </mat-toolbar>
+
+  <div class="flex">
+    <div *ngFor="let usuario of usuarios">
+      <p>
+        <strong>{{ usuario.first_name }}</strong>
+      </p>
+      <p>{{ usuario.email }}</p>
+      <img [src]="usuario.avatar" />
+    </div>
+  </div>
+</div>

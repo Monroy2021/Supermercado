@@ -1,0 +1,14 @@
+.flex > div {
+    margin: 0 1rem 2rem 1rem;
+    text-align: center;
+}
+div {
+    display: block;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

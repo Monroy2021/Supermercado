@@ -1,0 +1,46 @@
+<div class="body">
+  <div class="Registro">
+    <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+    <form [formGroup]="form" *ngIf="!loading" >
+      <img src="../../../assets/img/registro.png" width="50%" />
+      <h1>Registro</h1>
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          matInput
+          autocomplete="off"
+          formControlName="email"
+        />
+      </mat-form-field>
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input
+          type="password"
+          matInput
+          autocomplete="off"
+          formControlName="password"
+        />
+      </mat-form-field>
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Repetir contraseña</mat-label>
+        <input
+          type="password"
+          matInput
+          autocomplete="off"
+          formControlName="Rpassword"
+        />
+      </mat-form-field>
+      <br />
+      <button  [disabled]="form.invalid"
+        (click)="registrar()"
+        type="submit"
+        class="ancho button"
+        mat-raised-button
+        color="primary"
+      >
+        REGISTRAR
+      </button>
+    </form>
+  </div>
+</div>

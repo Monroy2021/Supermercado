@@ -1,0 +1,60 @@
+<div class="container">
+    <mat-toolbar>
+      <span>Editar Usuario</span>
+    </mat-toolbar>
+    <mat-card style="margin-top: 10px">
+      <form [formGroup]="form">
+        <mat-grid-list cols="4" rowHeight="70px">
+          <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-form-field class="ancho">
+              <mat-label>email</mat-label>
+              <input matInput autocomplete="off" formControlName="email" />
+            </mat-form-field>
+          </mat-grid-tile>
+  
+          <mat-grid-tile [colspan]="3" [rowspan]="6">
+            <img src="./assets/img/Usuario.png" width="250" height="250" />
+          </mat-grid-tile>
+  
+          <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-form-field class="ancho">
+              <mat-label>First name</mat-label>
+              <input matInput autocomplete="off" formControlName="firstName" />
+            </mat-form-field>
+          </mat-grid-tile>
+  
+          <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-form-field class="ancho">
+              <mat-label>Last name</mat-label>
+              <input matInput autocomplete="off" formControlName="lastName" />
+            </mat-form-field>
+          </mat-grid-tile>
+  
+         <!--  <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-form-field class="ancho">
+              <mat-label>Sexo</mat-label>
+              <mat-select formControlName="sexo">
+                <mat-option *ngFor="let item of sexo" [value]="item">
+                  {{ item }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile> -->
+  
+          <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <button mat-raised-button style="margin-right: 20px" (click)="regresar()">Volver</button>
+            
+            <button (click)="editar()"
+              type="submit"
+              [disabled]="form.invalid"
+              mat-raised-button
+              color="primary"
+            >
+              Editar
+            </button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </form>
+    </mat-card>
+  </div>
+  
